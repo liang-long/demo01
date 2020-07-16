@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.kgc.mapper.CategoryMapper">
+    <select id="selectAllCategories" resultType="Category">
+        select * from category
+    </select>
+
+    <select id="selectCategoryById" parameterType="Integer" resultType="Category">
+        select * from category where id = #{id}
+    </select>
+</mapper>
